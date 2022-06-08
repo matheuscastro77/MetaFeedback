@@ -1,0 +1,1 @@
+export const BASE_URL = 'https://g4-hackathon-meta.herokuapp.com'

@@ -1,0 +1,6 @@
+export const primaryColor = '#122870'
+export const neutralColorP = '#FFF'
+export const neutralColorN = '#000'
+export const neutralColor = '#FFF'
+export const secondaryColor = '#FFF'
+export const neutralColorS = '#97C93C'

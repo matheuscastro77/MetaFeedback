@@ -1,0 +1,281 @@
+POST http://localhost:3003/signup
+Content-Type: application/json
+
+{
+  "name": "daniel", 
+  "email": "daniel@gmail.com",
+  "password": "123456",
+  "role": "MANAGER"
+}
+###
+//search user system
+GET http://localhost:3003/user
+Content-Type: application/json
+###
+
+
+
+###
+//search systemUser id
+GET http://localhost:3003/signup/search/94901437-529f-4d3f-b68e-43a626bf67eb
+
+###
+
+//login 
+# @name login
+POST http://localhost:3003/login
+Content-Type: application/json
+
+{
+    "email": "carlise@gmail.com",
+    "password": "123456"
+}
+
+### 
+
+
+//Create leaguer
+POST http://localhost:3003/leaguer/signup
+Content-Type: application/json
+Authorization:  {{login.response.body.token}}
+
+{
+  "name": "Marcus Mendes", 
+  "email": "marcus@teste.com",
+  "team": "1dcc194d-9e82-4c4c-8812-c4ae9c5efd42", 
+  "technology":"HTML, CSS, JavaScript, MySql, React, Express, Axios", 
+  "language": "ingles, espanhol",
+  "responsible": "3c713c2c-a276-4d38-9028-b7e9182b7283", 
+  "profession": "Back-end",
+  "SYSTEM_USER_id": "b1627505-c169-4918-8233-c94d89510101"
+}
+
+###
+
+//search id leaguer
+GET http://localhost:3003/profile/9e9af649-f538-4050-a5e8-4aeecdcd9a16
+Content-Type: application/json
+Authorization:  {{login.response.body.token}}
+### 
+
+//search all leaguer
+GET http://localhost:3003/leaguer
+Content-Type: application/json
+Authorization:  {{login.response.body.token}}
+
+###
+
+//delete leaguer
+DELETE http://localhost:3003/profile/aa321452-3034-46ff-a8d1-9913d38586cb
+Content-Type: application/json
+Authorization:  {{login.response.body.token}}
+
+#### 
+
+//Update leaguer
+PUT http://localhost:3003/profile/update/516af544-dfb0-4f97-a0e6-22d20d9174b9
+Content-Type: application/json
+Authorization:  {{login.response.body.token}}
+
+{
+      "responsible":"d15128c7-4250-4c4c-99e4-940e1f666b59"
+  }
+
+###
+
+//Create form
+POST http://localhost:3003/form/signup
+Content-Type: application/json
+Authorization:  {{login.response.body.token}}
+
+{
+  "send_email": "matheus@gmail.com",
+  "LEAGUER_id": "a122ff35-f1b9-46c6-982c-b64c437c8e12",
+  "project":"Labenu",
+  "time": "6 meses",
+  "technology": "Java, CSS, JavaScript, React, PHP",
+  "type_hiring": "CLT", 
+  "SYSTEM_USER_id": "b1627505-c169-4918-8233-c94d89510101"
+}
+###
+
+# @name form
+POST http://localhost:3003/authentication
+Content-Type: application/json
+
+{
+  "send_email": "matheus@gmail.com"
+}
+### 
+
+// form answers
+PUT http://localhost:3003/form/update/$2a$10$kPn9s0BlDY/3yBtPXR2oFeB/fAsJpcL4ymtyhmUjHhwU8I7H.0KEq
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJoYXNobGluayI6IiQyYSQxMCRrUG45czBCbERZLzN5QnRQWFIyb0ZlQi9mQXNKcGNMNHltdHlobVVqSGh3VThJN0guMEtFcSIsImlhdCI6MTY1NDUzMjg1NSwiZXhwIjoxNjU0NTMyOTE1fQ.PDFP_nXBBGJ_5lzRQmaYuQHtZWSdu1LAXWqZTWxRIgE
+
+
+{
+  "performance": "Bom",
+  "comment_performance": "kfdfhgfddhdhhdhdfffffffffffffffffffffhdfhjjfjf",
+  "delivery_quality": "Bom",
+  "comment_delivery_quality": "comment_delivery_quality", 
+  "team_work": "Bom",
+  "comment_team_work": "comment_teasdfsdfm_work", 
+  "commitment": "Bom",
+  "comment_commitment": "comment_commitment", 
+  "punctual": "Bom",
+  "comment_punctual": "comment_punctual", 
+  "work_under_pressure": "Bom",
+  "comment_work_under_pressure": "comment_work_under_pressure", 
+  "ceremonies": "Bom",
+  "comment_ceremonies": "comment_ceremonies", 
+  "leadership_ability": "Bom",
+  "comment_leadership_ability": "comment_leadership_ability", 
+  "proactive": "Bom",
+  "comment_proactive": "comment_proactive", 
+  "skills": "Bom", 
+  "general_considerations": "general_considerations"
+}
+### 
+
+
+//delete form
+DELETE https://g4-hackathon-meta.herokuapp.com/form/ce6bb7e9-6f64-4f2b-847c-58fac081e13c
+Content-Type: application/json
+Authorization:  {{login.response.body.token}}
+
+### 
+//search form id
+GET http://localhost:3003/form/1f3cfaf4-196a-47e0-b74f-f321aec199f8
+Content-Type: application/json
+Authorization:  {{login.response.body.token}}
+### 
+
+### 
+//search all form 
+GET https://g4-hackathon-meta.herokuapp.com/form
+Content-Type: application/json
+Authorization:  {{login.response.body.token}}
+### 
+
+//search all form leaguer id
+GET http://localhost:3003/form/answer/leaguer/c9f6f0f10-8266-4fe7-9aa6-35719f8c7638
+Content-Type: application/json
+Authorization: {{login.response.body.token}}
+###
+
+
+POST http://localhost:3003/questions/signup/
+Content-Type: application/json
+Authorization:  {{login.response.body.token}}
+
+{
+  "questions": "Conseguiu se adaptar com mudanças de forma rápida??",
+  "answer": " ",
+  "SYSTEM_USER_id": "9f6f0f10-8266-4fe7-9aa6-35719f8c7638"
+}
+
+###
+
+
+PUT http://localhost:3003/questions/eed0dc9c-50a6-4c20-99b4-e87f58ef0180
+Content-Type: application/json
+Authorization:  {{login.response.body.token}}
+
+{
+  "questions": "Conseguiu se adaptar com mudanças de forma rápida?",
+  "answer": " ",
+  "SYSTEM_USER_id": "97e1dc18-f242-41c7-be2e-8e8f4bfc2aff"
+}
+
+###
+
+
+//send email
+POST  http://localhost:3003/send
+Content-Type: application/json
+Authorization: {{login.response.body.token}}
+
+{
+  "name": "Matheus",
+  "email": "matheuscastro1997@hotmail.com",
+}
+
+###
+//search questions
+GET http://localhost:3003/questions/2ed6d840-6a1f-410c-80b4-f95521f941f9
+Content-Type: application/json
+Authorization:  {{login.response.body.token}}
+
+### 
+
+//search all questions
+GET http://localhost:3003/questions
+Content-Type: application/json
+Authorization:  {{login.response.body.token}}
+
+### 
+
+
+//delete questions
+DELETE http://localhost:3003/questions/a7abfd55-a03e-45a0-a95d-3f81b6f7509f
+Content-Type: application/json
+Authorization:  {{login.response.body.token}}
+
+### 
+
+
+//search leaguer responsible id
+GET http://localhost:3003/leaguer/68fa11cc-bcb9-44db-9434-4e4845bcc65c
+Content-Type: application/json
+Authorization:  {{login.response.body.token}}
+### 
+
+
+//Answer final
+POST  http://localhost:3003/answerfinal/signup
+Content-Type: application/json
+Authorization: {{login.response.body.token}}
+
+{
+  "compiled_answer": "Responde positivamente às mudanças, adotando e usando novas práticas para realizar objetivos e resolver problemas.Executa tarefas com cuidado.",
+  "SYSTEM_USER_id": "9f6f0f10-8266-4fe7-9aa6-35719f8c7638",
+  "LEAGUER_ANSWER_id": "9e9af649-f538-4050-a5e8-4aeecdcd9a16"
+}
+###
+
+//search user answerfinal
+GET http://localhost:3003/answerfinal/520ec417-8992-437a-8b29-625836666ef7
+Content-Type: application/json
+Authorization:  {{login.response.body.token}}
+###
+
+
+//search all answerfinal
+GET http://localhost:3003/answerfinal
+Content-Type: application/json
+Authorization:  {{login.response.body.token}}
+###
+
+
+//create team
+POST http://localhost:3003/team/signup
+Content-Type: application/json
+Authorization: {{login.response.body.token}}
+
+{
+  "team": "Tesla", 
+  "SYSTEM_USER_id": "9f6f0f10-8266-4fe7-9aa6-35719f8c7638"    
+} 
+
+###
+ //search all team 
+GET http://localhost:3003/team
+Content-Type: application/json
+###
+
+//search team id
+GET http://localhost:3003/team/3947e83c-47f2-45a9-b0a0-3beab86c54c1
+Content-Type: application/json
+Authorization: {{login.response.body.token}}
+###
