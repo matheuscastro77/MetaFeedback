@@ -7,11 +7,11 @@
 
 ## People working on the project:
 <ul>
-    <li>[Matheus Castro](https://www.linkedin.com/in/matheuscastro77/) - Frontend</li> 
-    <li>[Jardel Santos](https://www.linkedin.com/in/jardel-santos-66a821208/) - Frontend</li>
-    <li>[Ana karine](https://www.linkedin.com/in/ana-karine-739b94142/) - Frontend</li>
-    <li>[Carlise Garbin](https://www.linkedin.com/in/carlise-garbin-debona/) - Backend</li>
-    <li>[Sergio Henrique](https://www.linkedin.com/in/sergio-henrique-7a7ab91aa/) - Backend</li>
+    <li><a href='https://www.linkedin.com/in/matheuscastro77/'> Matheus Castro </a> -  Frontend</li> 
+    <li><a href='https://www.linkedin.com/in/jardel-santos-66a821208/'> Jardel Santos </a> -  Frontend</li> 
+    <li><a href='https://www.linkedin.com/in/ana-karine-739b94142/'> Ana karine </a> -  Frontend</li> 
+    <li><a href='https://www.linkedin.com/in/carlise-garbin-debona/'> Carlise Garbin </a> -  Backend</li> 
+    <li><a href='https://www.linkedin.com/in/sergio-henrique-7a7ab91aa/'> Sergio Henrique </a> -  Backend</li>    
 </ul>
 
 ## My responsibilities in the project
