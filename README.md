@@ -2,6 +2,7 @@
     Hackathon Meta
 </h2>
 
+## 21/11/23 -- Backend is no longer functional
 ## Link 
 [Link](https://meta-feedback.vercel.app/)
 
